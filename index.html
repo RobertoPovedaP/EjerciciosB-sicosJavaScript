@@ -12,22 +12,25 @@
             document.getElementById('d2').innerHTML=Date();
         }
 
-        var fecha_hoy = new Date();
-        var horas=fecha_hoy.getHours();
-        var minutos=fecha_hoy.getMinutes();
-        var segundos=fecha_hoy.getSeconds();
-
+        
 
         function pr3(){
+            var fecha_hoy = new Date();
+            var horas=fecha_hoy.getHours();
+            var minutos=fecha_hoy.getMinutes();
+            var segundos=fecha_hoy.getSeconds();
             document.getElementById('d3').innerHTML=horas+" : "+minutos+" : "+segundos;
+            var temporizador=setTimeout(function(){pr3()},300);
         }
+
+       
     </script>
 
 </head>
 
 
-<body onload="pr1()">
-    <div id="d1">
+<body onload="pr3()">
+    <div id="d1" onclick="pr1()">
         Hola
     </div>
 
@@ -35,7 +38,7 @@
         Texto New
     </div>
 
-    <div id="d3" onclick="pr3()">
+    <div id="d3">
         Texto tres
     </div>
 
