@@ -6,9 +6,20 @@
     <script>
         function pr1(){
             document.getElementById('d1').innerHTML="Ahora este texto es diferente :/";
-
         }
 
+        function pr2(){
+            document.getElementById('d2').innerHTML=Date();
+        }
+
+        var fecha_hoy = new Date();
+        var horas=fecha_hoy.getHours();
+        var minutos=fecha_hoy.getMinutes();
+
+
+        function pr3(){
+            document.getElementById('d3').innerHTML=horas+" : "+minutos;
+        }
     </script>
 
 </head>
@@ -17,6 +28,14 @@
 <body onload="pr1()">
     <div id="d1">
         Hola
+    </div>
+
+    <div id="d2" onclick="pr2()">
+        Texto New
+    </div>
+
+    <div id="d3" onclick="pr3()">
+        Texto tres
     </div>
 
 
