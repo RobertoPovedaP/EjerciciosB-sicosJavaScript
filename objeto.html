@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var k={
+                nombre: "Antonio",
+                peso: 90,
+                altura: 1.80,
+                masacorporal: function(){
+                    return this.peso/(this.altura*this.altura)
+                }
+
+            };
+
+            function f(){
+                k.peso=document.getElementById("dato1").value;
+                k.altura=document.getElementById("dato2").value;
+                document.getElementById("resultado").innerHTML=k.masacorporal();
+            }
+        </script>
+    </head>
+    <body>
+        Peso: <input type="text" id="dato1"/><br/>
+        Altura: <input type="text" id="dato2"/><br/>
+        <input type="button" onclick="f()"/><br/>
+        Resultado: <span id="resultado"></span>
+    </body>
+</html>
