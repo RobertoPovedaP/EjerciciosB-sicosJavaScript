@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        
+    
+        function f(){
+            var n1=parseInt(document.getElementById("dato1").value);
+            var n2=parseInt(document.getElementById("dato2").value);
+            var total=n1+n2;
+            document.getElementById("resultado").innerHTML=total;
+        }
+    
+        
+    </script>
+</head>
+
+<body>
+    Dato 1: <input type="text" id="dato1"/><br/>
+    Dato 2: <input type="text" id="dato2"/><br/>
+    <input type="button" onclick="f()"/><br/>
+    Resultado: <span id="resultado"></span>
+</body>
+</html>
