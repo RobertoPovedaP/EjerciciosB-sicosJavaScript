@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Juego 3 en Raya</title>
+    <script>
+        var mapa=[0,0,0,0,0,0,0,0,0];
+        function dibujar(){
+            for(i=0;i<9;i++){
+                if (mapa[i]==0) document.getElementById("c"+i).style="background-color:white";
+                if (mapa[i]==1) document.getElementById("c"+i).style="background-color:blue";
+                if (mapa[i]==2) document.getElementById("c"+i).style="background-color:green";
+            }
+
+        }
+
+        function pcelda(celda){
+            if(mapa[celda]==0) mapa[celda]=1;
+            dibujar();
+        }
+    </script>
+</head>
+<body>
+    <table borde="1">
+        <tr>
+            <td width="100" height="100" id="c0" onclick="pcelda(0)"></td>
+            <td width="100" height="100" id="c1" onclick="pcelda(1)"></td>
+            <td width="100" height="100" id="c2" onclick="pcelda(2)"></td>
+        </tr>
+        <tr>
+            <td width="100" height="100" id="c3" onclick="pcelda(3)"></td>
+            <td width="100" height="100" id="c4" onclick="pcelda(4)"></td>
+            <td width="100" height="100" id="c5" onclick="pcelda(5)"></td>
+        </tr>
+        <tr>
+            <td width="100" height="100" id="c6" onclick="pcelda(6)"></td>
+            <td width="100" height="100" id="c7" onclick="pcelda(7)"></td>
+            <td width="100" height="100" id="c8" onclick="pcelda(8)"></td>
+        </tr>
+    </table>
+</body>
+</html>
