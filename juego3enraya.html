@@ -51,10 +51,42 @@
                     numEspacios++;
                 }
             }
+            
+            //filas
+            if(mapa[3]==mapa[4] && mapa[4]==mapa[5] && mapa[3]!=0){
+                return mapa[3];
+            }
+            if(mapa[0]==mapa[1] && mapa[1]==mapa[2] && mapa[0]!=0){
+                return mapa[0];
+            }
+            if(mapa[6]==mapa[7] && mapa[7]==mapa[8] && mapa[6]!=0){
+                return mapa[6];
+            }
+
+            //columnas
+            if(mapa[0]==mapa[3] && mapa[3]==mapa[6] && mapa[0]!=0){
+                return mapa[0];
+            }
+            if(mapa[1]==mapa[4] && mapa[4]==mapa[7] && mapa[1]!=0){
+                return mapa[1];
+            }
+            if(mapa[2]==mapa[5] && mapa[5]==mapa[8] && mapa[2]!=0){
+                return mapa[2];
+            }
+
+            //diagonales
+            if(mapa[0]==mapa[4] && mapa[4]==mapa[8] && mapa[0]!=0){
+                return mapa[0];
+            }
+            if(mapa[2]==mapa[4] && mapa[4]==mapa[6] && mapa[2]!=0){
+                return mapa[2];
+            }
+
+
             if(numEspacios>0){
                 return 0;
             } else{
-                return 1;
+                return 3;
             }
 
         }
