@@ -28,6 +28,35 @@
                 window.alert("No pulsar en celda coloreada");
             }
             dibujar();
+            var r=ganador();
+            switch(r){
+                case 0:
+                    break;
+                case 1:
+                    window.alert("¡Ganó el azul!");
+                    break;
+                case 2:
+                    window.alert("¡Ganó el verde!");
+                    break;
+                case 3:
+                    window.alert("¡Empate!");
+                    break;
+            }
+        }
+
+        function ganador(){
+            var numEspacios=0;
+            for(i=0;i<9;i++){
+                if(mapa[i]==0){
+                    numEspacios++;
+                }
+            }
+            if(numEspacios>0){
+                return 0;
+            } else{
+                return 1;
+            }
+
         }
     </script>
 </head>
