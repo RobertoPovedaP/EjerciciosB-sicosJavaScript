@@ -4,6 +4,7 @@
     <title> Juego 3 en Raya</title>
     <script>
         var mapa=[0,0,0,0,0,0,0,0,0];
+        var player=1;
         function dibujar(){
             for(i=0;i<9;i++){
                 if (mapa[i]==0) document.getElementById("c"+i).style="background-color:white";
@@ -14,7 +15,18 @@
         }
 
         function pcelda(celda){
-            if(mapa[celda]==0) mapa[celda]=1;
+            if(mapa[celda]==0) {
+                if (player==1){
+                    mapa[celda]=1;
+                    player=2;
+                } else{
+                    mapa[celda]=2;
+                    player=1;
+                }
+
+            } else{
+                window.alert("No pulsar en celda coloreada");
+            }
             dibujar();
         }
     </script>
